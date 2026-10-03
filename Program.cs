@@ -155,3 +155,6 @@ int newHealth = ++health;
 Console.WriteLine($"Текущее здоровье: {health}");
 Console.WriteLine($"Новое здоровье: {newHealth}");
 // Комментарий: Сначала переменная увеличивается, а потом возвращается её новое значение.
+
+int result = 10 - 2 * 3 + 4 / 2;
+Console.WriteLine($"10 - 2 * 3 + 4 / 2 = {result}");
