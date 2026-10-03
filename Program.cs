@@ -110,15 +110,20 @@ Console.Write("Есть льгота? (1 - да, 0 - нет): ");
 int benefitInput = int.Parse(Console.ReadLine());
 bool hasBenefit = (benefitInput == 1);
 // TODO 1: hasGoodCertificate = true, если averageGrade >= 4.0
-bool hasGoodCertificate = /* ваш код */;
+bool hasGoodCertificate = (averageGrade >= 4.0);
 // TODO 2: hasGoodExam = true, если examScore >= 60
-bool hasGoodExam = /* ваш код */;
+bool hasGoodExam = (examScore >= 60);
 // TODO 3: isEligibleByRules = true, если
 // (hasGoodCertificate и hasGoodExam) ИЛИ hasBenefit
-bool isEligibleByRules = /* ваш код */;
+bool isEligibleByRules = (hasGoodCertificate && hasGoodExam) || hasBenefit;
 // TODO 4: итоговый балл = средний балл * 10, а затем прибавьте баллы
 // экзамена используйте составной оператор += для второго шага
 double totalScore = averageGrade * 10;
-/* ваш код: totalScore += ... */
+totalScore += examScore;
 Console.WriteLine();
-Console.WriteLine
+Console.WriteLine("Результат");
+Console.WriteLine($"Хороший аттестат (>= 4.0): {hasGoodCertificate}");
+Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
+Console.WriteLine($"Льгота: {hasBenefit}");
+Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
+Console.WriteLine($"Итоговый балл: {totalScore}");
