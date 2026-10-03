@@ -135,3 +135,13 @@ int number = int.Parse(Console.ReadLine());
 bool isEven = (number % 2 == 0);
 
 Console.WriteLine(isEven);
+
+Console.WriteLine();
+Console.WriteLine("Счётчик очков");
+
+int point = 120;
+int newPoint = point++;
+
+Console.WriteLine($"Текущее кол-во очков: {point}");
+Console.WriteLine($"Новое кол-во очков: {newPoint}");
+// Комментарий: Сначала используется текущее значение переменной, а потом оно увеличивается.
