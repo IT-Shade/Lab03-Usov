@@ -145,3 +145,13 @@ int newPoint = point++;
 Console.WriteLine($"Текущее кол-во очков: {point}");
 Console.WriteLine($"Новое кол-во очков: {newPoint}");
 // Комментарий: Сначала используется текущее значение переменной, а потом оно увеличивается.
+
+Console.WriteLine();
+Console.WriteLine("Счётчик здоровья");
+
+int health = 70;
+int newHealth = ++health;
+
+Console.WriteLine($"Текущее здоровье: {health}");
+Console.WriteLine($"Новое здоровье: {newHealth}");
+// Комментарий: Сначала переменная увеличивается, а потом возвращается её новое значение.
